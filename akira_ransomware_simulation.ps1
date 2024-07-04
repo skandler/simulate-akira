@@ -8,6 +8,7 @@
 #
 # Prerequisite: https://github.com/redcanaryco/invoke-atomicredteam - works best with powershell 7
 #
+# Description can be found at: https://medium.com/@sebastian.kandler/simulating-a-akira-ransomware-attack-with-atomic-red-team-9e9d66e7bf60
 #
 # see detailled descriptions of tests at github readme files for atomics for example for T1003: https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003/T1003.md
 #
