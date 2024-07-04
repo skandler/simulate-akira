@@ -3,6 +3,8 @@
  Recommend to run it also without pattern based malware protection, to verify EDR behaviour based detections, otherwise pattern based AV will block most of the tools. An attacker who does obfuscation of these attack tools, wont be detected by pattern based av.
  Expect that attackers will turn off your EDR Solution like in steps 22-24, how do you detect and protect without EDR? running it without EDR will also test your system hardening settings like Windows Credential Dump Hardening settings like LSA Protect or Credential guard. 
 
+Overview at Medium: https://medium.com/@sebastian.kandler/simulating-a-akira-ransomware-attack-with-atomic-red-team-9e9d66e7bf60
+
  Prerequisite: https://github.com/redcanaryco/invoke-atomicredteam - works best with powershell 7
 
 
