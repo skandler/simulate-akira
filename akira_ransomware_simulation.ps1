@@ -159,12 +159,8 @@ Invoke-AtomicTest T1567.002
 Invoke-AtomicTest T1486 -TestNumbers 5
 
 # Test 31 - T1486 - Add Files with .akira File Ending + Akira Ransomnote
-echo "# Test 31 - T1486 - Add Files with .akira File Ending + Akira Ransomnote"
-New-Item -Path "C:\testfile-1.akira" -ItemType File
-New-Item -Path "C:\testfile-2.akira" -ItemType File
-New-Item -Path "C:\testfile-3.akira" -ItemType File
-New-Item -Path "C:\testfile-4.akira" -ItemType File
-New-Item -Path "C:\testfile-5.akira" -ItemType File
+echo "# Test 31 - T1486 - Add 100 Files with .akira File Ending + Akira Ransomnote"
+1..100 | ForEach-Object {    New-Item -Path "C:\" -Name "testfile-$_.akira" -ItemType file}
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/skandler/simulate-akira/main/akira_readme.txt" -OutFile "C:\akira_readme.txt"
 
 # Atomic Test #32 - T1490 - Windows - Delete Volume Shadow Copies with Powershell
