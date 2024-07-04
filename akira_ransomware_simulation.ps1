@@ -140,7 +140,7 @@ Invoke-AtomicTest T1219 -TestNumbers 2
 # Test #26 - T1090 - ngrok Proxy Service
 echo "# Test #26 - T1090 - ngrok Proxy Service"
 ping -n 1 tunnel.ngrok.com
-
+tnc tunnel.ngrok.com -port 443
 
 # Atomic Test #27 T1560.001 - Archive Collected Data: Archive via Utility - with Win-rar and password protected
 Invoke-AtomicTest T1560.001 -TestNumbers 1 -GetPrereqs
