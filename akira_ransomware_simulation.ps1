@@ -86,8 +86,8 @@ Invoke-AtomicTest T1003.001 -TestNumber 1 -GetPrereqs
 Invoke-AtomicTest T1003.001 -TestNumber 1
 
 # Atomic Test 11 - T1555.003 - Dump Credentials using Lazagne
-Invoke-AtomicTest T1555.003 -TestNumber 9 -GetPrereqs
-Invoke-AtomicTest T1555.003 -TestNumber 9
+Invoke-AtomicTest T1555.003 -TestNumber 3 -GetPrereqs
+Invoke-AtomicTest T1555.003 -TestNumber 3
 
 # Atomic Test 12 - T1555.003 - Dump Credentials using esentutl.exe from Chrome 
 Invoke-AtomicTest T1555.003 -TestNumber 17 -GetPrereqs
